@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "run", "migration:run", "start"]
+CMD ["npm", "run", "migration:run", "&&", "npm", "run", "start"]
