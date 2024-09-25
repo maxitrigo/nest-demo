@@ -11,7 +11,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(auth(auth0Config))
   app.use(LoggerGlobal)
-  console.log(process.env.SERVER_PORT)
   await app.listen(process.env.SERVER_PORT);
 }
 bootstrap();
