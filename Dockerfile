@@ -10,5 +10,6 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "npm run typeorm migration:run -- -d ./dist/src/config/typeorm.config.js && npm run start"]
+CMD ["sh", "-c", "npm run build && npm run typeorm migration:run -- -d ./dist/src/config/typeorm.config.js && npm run start"]
+
 
